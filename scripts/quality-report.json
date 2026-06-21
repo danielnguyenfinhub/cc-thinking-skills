@@ -1,539 +1,5 @@
 [
   {
-    "name": "thinking-cynefin",
-    "path": "/home/user/cc-thinking-skills/skills/thinking-cynefin/SKILL.md",
-    "sections": [
-      {
-        "name": "YAML Frontmatter",
-        "found": true
-      },
-      {
-        "name": "Overview",
-        "found": true
-      },
-      {
-        "name": "Core Principle",
-        "found": true
-      },
-      {
-        "name": "When to Use",
-        "found": true
-      },
-      {
-        "name": "Decision Flow",
-        "found": true
-      },
-      {
-        "name": "Process/Steps",
-        "found": false
-      },
-      {
-        "name": "Examples",
-        "found": false
-      },
-      {
-        "name": "Template",
-        "found": false
-      },
-      {
-        "name": "Verification Checklist",
-        "found": false
-      },
-      {
-        "name": "Key Questions",
-        "found": true
-      },
-      {
-        "name": "Wisdom/Attribution",
-        "found": true
-      }
-    ],
-    "quality": [
-      {
-        "name": "Description Length",
-        "pass": true,
-        "detail": "190 chars (max 200)"
-      },
-      {
-        "name": "Has Multiple Examples",
-        "pass": false,
-        "detail": "Found 0 example(s)"
-      },
-      {
-        "name": "Has Tables",
-        "pass": true,
-        "detail": "Found 7 table row(s)"
-      },
-      {
-        "name": "Has Checklists",
-        "pass": false,
-        "detail": "Found 0 checklist item(s)"
-      },
-      {
-        "name": "Has Code Blocks",
-        "pass": false,
-        "detail": "Found 1 code block(s)"
-      },
-      {
-        "name": "Word Count (500-3000)",
-        "pass": true,
-        "detail": "596 words"
-      },
-      {
-        "name": "Has Anti-patterns/Failure Modes",
-        "pass": true,
-        "detail": "Found warnings"
-      }
-    ],
-    "score": 11,
-    "maxScore": 18
-  },
-  {
-    "name": "thinking-occams-razor",
-    "path": "/home/user/cc-thinking-skills/skills/thinking-occams-razor/SKILL.md",
-    "sections": [
-      {
-        "name": "YAML Frontmatter",
-        "found": true
-      },
-      {
-        "name": "Overview",
-        "found": true
-      },
-      {
-        "name": "Core Principle",
-        "found": true
-      },
-      {
-        "name": "When to Use",
-        "found": true
-      },
-      {
-        "name": "Decision Flow",
-        "found": true
-      },
-      {
-        "name": "Process/Steps",
-        "found": false
-      },
-      {
-        "name": "Examples",
-        "found": false
-      },
-      {
-        "name": "Template",
-        "found": false
-      },
-      {
-        "name": "Verification Checklist",
-        "found": false
-      },
-      {
-        "name": "Key Questions",
-        "found": false
-      },
-      {
-        "name": "Wisdom/Attribution",
-        "found": true
-      }
-    ],
-    "quality": [
-      {
-        "name": "Description Length",
-        "pass": true,
-        "detail": "192 chars (max 200)"
-      },
-      {
-        "name": "Has Multiple Examples",
-        "pass": false,
-        "detail": "Found 0 example(s)"
-      },
-      {
-        "name": "Has Tables",
-        "pass": true,
-        "detail": "Found 14 table row(s)"
-      },
-      {
-        "name": "Has Checklists",
-        "pass": false,
-        "detail": "Found 0 checklist item(s)"
-      },
-      {
-        "name": "Has Code Blocks",
-        "pass": true,
-        "detail": "Found 3 code block(s)"
-      },
-      {
-        "name": "Word Count (500-3000)",
-        "pass": true,
-        "detail": "1049 words"
-      },
-      {
-        "name": "Has Anti-patterns/Failure Modes",
-        "pass": true,
-        "detail": "Found warnings"
-      }
-    ],
-    "score": 11,
-    "maxScore": 18
-  },
-  {
-    "name": "thinking-debiasing",
-    "path": "/home/user/cc-thinking-skills/skills/thinking-debiasing/SKILL.md",
-    "sections": [
-      {
-        "name": "YAML Frontmatter",
-        "found": true
-      },
-      {
-        "name": "Overview",
-        "found": true
-      },
-      {
-        "name": "Core Principle",
-        "found": false
-      },
-      {
-        "name": "When to Use",
-        "found": false
-      },
-      {
-        "name": "Decision Flow",
-        "found": false
-      },
-      {
-        "name": "Process/Steps",
-        "found": false
-      },
-      {
-        "name": "Examples",
-        "found": true
-      },
-      {
-        "name": "Template",
-        "found": true
-      },
-      {
-        "name": "Verification Checklist",
-        "found": true
-      },
-      {
-        "name": "Key Questions",
-        "found": true
-      },
-      {
-        "name": "Wisdom/Attribution",
-        "found": true
-      }
-    ],
-    "quality": [
-      {
-        "name": "Description Length",
-        "pass": true,
-        "detail": "197 chars (max 200)"
-      },
-      {
-        "name": "Has Multiple Examples",
-        "pass": false,
-        "detail": "Found 1 example(s)"
-      },
-      {
-        "name": "Has Tables",
-        "pass": true,
-        "detail": "Found 5 table row(s)"
-      },
-      {
-        "name": "Has Checklists",
-        "pass": true,
-        "detail": "Found 21 checklist item(s)"
-      },
-      {
-        "name": "Has Code Blocks",
-        "pass": false,
-        "detail": "Found 1 code block(s)"
-      },
-      {
-        "name": "Word Count (500-3000)",
-        "pass": true,
-        "detail": "1308 words"
-      },
-      {
-        "name": "Has Anti-patterns/Failure Modes",
-        "pass": true,
-        "detail": "Found warnings"
-      }
-    ],
-    "score": 12,
-    "maxScore": 18
-  },
-  {
-    "name": "thinking-kepner-tregoe",
-    "path": "/home/user/cc-thinking-skills/skills/thinking-kepner-tregoe/SKILL.md",
-    "sections": [
-      {
-        "name": "YAML Frontmatter",
-        "found": true
-      },
-      {
-        "name": "Overview",
-        "found": true
-      },
-      {
-        "name": "Core Principle",
-        "found": true
-      },
-      {
-        "name": "When to Use",
-        "found": true
-      },
-      {
-        "name": "Decision Flow",
-        "found": true
-      },
-      {
-        "name": "Process/Steps",
-        "found": true
-      },
-      {
-        "name": "Examples",
-        "found": false
-      },
-      {
-        "name": "Template",
-        "found": false
-      },
-      {
-        "name": "Verification Checklist",
-        "found": false
-      },
-      {
-        "name": "Key Questions",
-        "found": false
-      },
-      {
-        "name": "Wisdom/Attribution",
-        "found": true
-      }
-    ],
-    "quality": [
-      {
-        "name": "Description Length",
-        "pass": true,
-        "detail": "192 chars (max 200)"
-      },
-      {
-        "name": "Has Multiple Examples",
-        "pass": false,
-        "detail": "Found 0 example(s)"
-      },
-      {
-        "name": "Has Tables",
-        "pass": true,
-        "detail": "Found 27 table row(s)"
-      },
-      {
-        "name": "Has Checklists",
-        "pass": false,
-        "detail": "Found 0 checklist item(s)"
-      },
-      {
-        "name": "Has Code Blocks",
-        "pass": true,
-        "detail": "Found 5 code block(s)"
-      },
-      {
-        "name": "Word Count (500-3000)",
-        "pass": true,
-        "detail": "1308 words"
-      },
-      {
-        "name": "Has Anti-patterns/Failure Modes",
-        "pass": true,
-        "detail": "Found warnings"
-      }
-    ],
-    "score": 12,
-    "maxScore": 18
-  },
-  {
-    "name": "thinking-map-territory",
-    "path": "/home/user/cc-thinking-skills/skills/thinking-map-territory/SKILL.md",
-    "sections": [
-      {
-        "name": "YAML Frontmatter",
-        "found": true
-      },
-      {
-        "name": "Overview",
-        "found": true
-      },
-      {
-        "name": "Core Principle",
-        "found": true
-      },
-      {
-        "name": "When to Use",
-        "found": true
-      },
-      {
-        "name": "Decision Flow",
-        "found": true
-      },
-      {
-        "name": "Process/Steps",
-        "found": true
-      },
-      {
-        "name": "Examples",
-        "found": false
-      },
-      {
-        "name": "Template",
-        "found": false
-      },
-      {
-        "name": "Verification Checklist",
-        "found": false
-      },
-      {
-        "name": "Key Questions",
-        "found": false
-      },
-      {
-        "name": "Wisdom/Attribution",
-        "found": true
-      }
-    ],
-    "quality": [
-      {
-        "name": "Description Length",
-        "pass": true,
-        "detail": "198 chars (max 200)"
-      },
-      {
-        "name": "Has Multiple Examples",
-        "pass": false,
-        "detail": "Found 0 example(s)"
-      },
-      {
-        "name": "Has Tables",
-        "pass": true,
-        "detail": "Found 8 table row(s)"
-      },
-      {
-        "name": "Has Checklists",
-        "pass": false,
-        "detail": "Found 0 checklist item(s)"
-      },
-      {
-        "name": "Has Code Blocks",
-        "pass": true,
-        "detail": "Found 4 code block(s)"
-      },
-      {
-        "name": "Word Count (500-3000)",
-        "pass": true,
-        "detail": "1009 words"
-      },
-      {
-        "name": "Has Anti-patterns/Failure Modes",
-        "pass": true,
-        "detail": "Found warnings"
-      }
-    ],
-    "score": 12,
-    "maxScore": 18
-  },
-  {
-    "name": "thinking-ooda",
-    "path": "/home/user/cc-thinking-skills/skills/thinking-ooda/SKILL.md",
-    "sections": [
-      {
-        "name": "YAML Frontmatter",
-        "found": true
-      },
-      {
-        "name": "Overview",
-        "found": true
-      },
-      {
-        "name": "Core Principle",
-        "found": true
-      },
-      {
-        "name": "When to Use",
-        "found": true
-      },
-      {
-        "name": "Decision Flow",
-        "found": true
-      },
-      {
-        "name": "Process/Steps",
-        "found": false
-      },
-      {
-        "name": "Examples",
-        "found": false
-      },
-      {
-        "name": "Template",
-        "found": false
-      },
-      {
-        "name": "Verification Checklist",
-        "found": false
-      },
-      {
-        "name": "Key Questions",
-        "found": true
-      },
-      {
-        "name": "Wisdom/Attribution",
-        "found": true
-      }
-    ],
-    "quality": [
-      {
-        "name": "Description Length",
-        "pass": true,
-        "detail": "182 chars (max 200)"
-      },
-      {
-        "name": "Has Multiple Examples",
-        "pass": false,
-        "detail": "Found 0 example(s)"
-      },
-      {
-        "name": "Has Tables",
-        "pass": true,
-        "detail": "Found 13 table row(s)"
-      },
-      {
-        "name": "Has Checklists",
-        "pass": false,
-        "detail": "Found 0 checklist item(s)"
-      },
-      {
-        "name": "Has Code Blocks",
-        "pass": true,
-        "detail": "Found 7 code block(s)"
-      },
-      {
-        "name": "Word Count (500-3000)",
-        "pass": true,
-        "detail": "897 words"
-      },
-      {
-        "name": "Has Anti-patterns/Failure Modes",
-        "pass": true,
-        "detail": "Found warnings"
-      }
-    ],
-    "score": 12,
-    "maxScore": 18
-  },
-  {
     "name": "thinking-triz",
     "path": "/home/user/cc-thinking-skills/skills/thinking-triz/SKILL.md",
     "sections": [
@@ -1068,6 +534,95 @@
     "maxScore": 18
   },
   {
+    "name": "thinking-debiasing",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-debiasing/SKILL.md",
+    "sections": [
+      {
+        "name": "YAML Frontmatter",
+        "found": true
+      },
+      {
+        "name": "Overview",
+        "found": true
+      },
+      {
+        "name": "Core Principle",
+        "found": false
+      },
+      {
+        "name": "When to Use",
+        "found": true
+      },
+      {
+        "name": "Decision Flow",
+        "found": true
+      },
+      {
+        "name": "Process/Steps",
+        "found": true
+      },
+      {
+        "name": "Examples",
+        "found": true
+      },
+      {
+        "name": "Template",
+        "found": true
+      },
+      {
+        "name": "Verification Checklist",
+        "found": true
+      },
+      {
+        "name": "Key Questions",
+        "found": true
+      },
+      {
+        "name": "Wisdom/Attribution",
+        "found": true
+      }
+    ],
+    "quality": [
+      {
+        "name": "Description Length",
+        "pass": true,
+        "detail": "197 chars (max 200)"
+      },
+      {
+        "name": "Has Multiple Examples",
+        "pass": false,
+        "detail": "Found 1 example(s)"
+      },
+      {
+        "name": "Has Tables",
+        "pass": true,
+        "detail": "Found 5 table row(s)"
+      },
+      {
+        "name": "Has Checklists",
+        "pass": true,
+        "detail": "Found 21 checklist item(s)"
+      },
+      {
+        "name": "Has Code Blocks",
+        "pass": false,
+        "detail": "Found 2 code block(s)"
+      },
+      {
+        "name": "Word Count (500-3000)",
+        "pass": true,
+        "detail": "1528 words"
+      },
+      {
+        "name": "Has Anti-patterns/Failure Modes",
+        "pass": true,
+        "detail": "Found warnings"
+      }
+    ],
+    "score": 15,
+    "maxScore": 18
+  },
+  {
     "name": "thinking-inversion",
     "path": "/home/user/cc-thinking-skills/skills/thinking-inversion/SKILL.md",
     "sections": [
@@ -1146,6 +701,95 @@
         "name": "Word Count (500-3000)",
         "pass": true,
         "detail": "1221 words"
+      },
+      {
+        "name": "Has Anti-patterns/Failure Modes",
+        "pass": true,
+        "detail": "Found warnings"
+      }
+    ],
+    "score": 15,
+    "maxScore": 18
+  },
+  {
+    "name": "thinking-occams-razor",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-occams-razor/SKILL.md",
+    "sections": [
+      {
+        "name": "YAML Frontmatter",
+        "found": true
+      },
+      {
+        "name": "Overview",
+        "found": true
+      },
+      {
+        "name": "Core Principle",
+        "found": true
+      },
+      {
+        "name": "When to Use",
+        "found": true
+      },
+      {
+        "name": "Decision Flow",
+        "found": true
+      },
+      {
+        "name": "Process/Steps",
+        "found": false
+      },
+      {
+        "name": "Examples",
+        "found": true
+      },
+      {
+        "name": "Template",
+        "found": true
+      },
+      {
+        "name": "Verification Checklist",
+        "found": true
+      },
+      {
+        "name": "Key Questions",
+        "found": false
+      },
+      {
+        "name": "Wisdom/Attribution",
+        "found": true
+      }
+    ],
+    "quality": [
+      {
+        "name": "Description Length",
+        "pass": true,
+        "detail": "192 chars (max 200)"
+      },
+      {
+        "name": "Has Multiple Examples",
+        "pass": false,
+        "detail": "Found 1 example(s)"
+      },
+      {
+        "name": "Has Tables",
+        "pass": true,
+        "detail": "Found 23 table row(s)"
+      },
+      {
+        "name": "Has Checklists",
+        "pass": true,
+        "detail": "Found 6 checklist item(s)"
+      },
+      {
+        "name": "Has Code Blocks",
+        "pass": true,
+        "detail": "Found 4 code block(s)"
+      },
+      {
+        "name": "Word Count (500-3000)",
+        "pass": true,
+        "detail": "1251 words"
       },
       {
         "name": "Has Anti-patterns/Failure Modes",
@@ -1413,6 +1057,95 @@
         "name": "Word Count (500-3000)",
         "pass": true,
         "detail": "2246 words"
+      },
+      {
+        "name": "Has Anti-patterns/Failure Modes",
+        "pass": true,
+        "detail": "Found warnings"
+      }
+    ],
+    "score": 16,
+    "maxScore": 18
+  },
+  {
+    "name": "thinking-ooda",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-ooda/SKILL.md",
+    "sections": [
+      {
+        "name": "YAML Frontmatter",
+        "found": true
+      },
+      {
+        "name": "Overview",
+        "found": true
+      },
+      {
+        "name": "Core Principle",
+        "found": true
+      },
+      {
+        "name": "When to Use",
+        "found": true
+      },
+      {
+        "name": "Decision Flow",
+        "found": true
+      },
+      {
+        "name": "Process/Steps",
+        "found": false
+      },
+      {
+        "name": "Examples",
+        "found": true
+      },
+      {
+        "name": "Template",
+        "found": true
+      },
+      {
+        "name": "Verification Checklist",
+        "found": true
+      },
+      {
+        "name": "Key Questions",
+        "found": true
+      },
+      {
+        "name": "Wisdom/Attribution",
+        "found": true
+      }
+    ],
+    "quality": [
+      {
+        "name": "Description Length",
+        "pass": true,
+        "detail": "182 chars (max 200)"
+      },
+      {
+        "name": "Has Multiple Examples",
+        "pass": false,
+        "detail": "Found 1 example(s)"
+      },
+      {
+        "name": "Has Tables",
+        "pass": true,
+        "detail": "Found 13 table row(s)"
+      },
+      {
+        "name": "Has Checklists",
+        "pass": true,
+        "detail": "Found 6 checklist item(s)"
+      },
+      {
+        "name": "Has Code Blocks",
+        "pass": true,
+        "detail": "Found 8 code block(s)"
+      },
+      {
+        "name": "Word Count (500-3000)",
+        "pass": true,
+        "detail": "1100 words"
       },
       {
         "name": "Has Anti-patterns/Failure Modes",
@@ -1869,6 +1602,95 @@
     "maxScore": 18
   },
   {
+    "name": "thinking-kepner-tregoe",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-kepner-tregoe/SKILL.md",
+    "sections": [
+      {
+        "name": "YAML Frontmatter",
+        "found": true
+      },
+      {
+        "name": "Overview",
+        "found": true
+      },
+      {
+        "name": "Core Principle",
+        "found": true
+      },
+      {
+        "name": "When to Use",
+        "found": true
+      },
+      {
+        "name": "Decision Flow",
+        "found": true
+      },
+      {
+        "name": "Process/Steps",
+        "found": true
+      },
+      {
+        "name": "Examples",
+        "found": true
+      },
+      {
+        "name": "Template",
+        "found": true
+      },
+      {
+        "name": "Verification Checklist",
+        "found": true
+      },
+      {
+        "name": "Key Questions",
+        "found": false
+      },
+      {
+        "name": "Wisdom/Attribution",
+        "found": true
+      }
+    ],
+    "quality": [
+      {
+        "name": "Description Length",
+        "pass": true,
+        "detail": "192 chars (max 200)"
+      },
+      {
+        "name": "Has Multiple Examples",
+        "pass": true,
+        "detail": "Found 3 example(s)"
+      },
+      {
+        "name": "Has Tables",
+        "pass": true,
+        "detail": "Found 40 table row(s)"
+      },
+      {
+        "name": "Has Checklists",
+        "pass": true,
+        "detail": "Found 6 checklist item(s)"
+      },
+      {
+        "name": "Has Code Blocks",
+        "pass": true,
+        "detail": "Found 8 code block(s)"
+      },
+      {
+        "name": "Word Count (500-3000)",
+        "pass": true,
+        "detail": "1726 words"
+      },
+      {
+        "name": "Has Anti-patterns/Failure Modes",
+        "pass": true,
+        "detail": "Found warnings"
+      }
+    ],
+    "score": 17,
+    "maxScore": 18
+  },
+  {
     "name": "thinking-leverage-points",
     "path": "/home/user/cc-thinking-skills/skills/thinking-leverage-points/SKILL.md",
     "sections": [
@@ -1947,6 +1769,95 @@
         "name": "Word Count (500-3000)",
         "pass": true,
         "detail": "2041 words"
+      },
+      {
+        "name": "Has Anti-patterns/Failure Modes",
+        "pass": true,
+        "detail": "Found warnings"
+      }
+    ],
+    "score": 17,
+    "maxScore": 18
+  },
+  {
+    "name": "thinking-map-territory",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-map-territory/SKILL.md",
+    "sections": [
+      {
+        "name": "YAML Frontmatter",
+        "found": true
+      },
+      {
+        "name": "Overview",
+        "found": true
+      },
+      {
+        "name": "Core Principle",
+        "found": true
+      },
+      {
+        "name": "When to Use",
+        "found": true
+      },
+      {
+        "name": "Decision Flow",
+        "found": true
+      },
+      {
+        "name": "Process/Steps",
+        "found": true
+      },
+      {
+        "name": "Examples",
+        "found": true
+      },
+      {
+        "name": "Template",
+        "found": true
+      },
+      {
+        "name": "Verification Checklist",
+        "found": true
+      },
+      {
+        "name": "Key Questions",
+        "found": false
+      },
+      {
+        "name": "Wisdom/Attribution",
+        "found": true
+      }
+    ],
+    "quality": [
+      {
+        "name": "Description Length",
+        "pass": true,
+        "detail": "198 chars (max 200)"
+      },
+      {
+        "name": "Has Multiple Examples",
+        "pass": true,
+        "detail": "Found 3 example(s)"
+      },
+      {
+        "name": "Has Tables",
+        "pass": true,
+        "detail": "Found 8 table row(s)"
+      },
+      {
+        "name": "Has Checklists",
+        "pass": true,
+        "detail": "Found 6 checklist item(s)"
+      },
+      {
+        "name": "Has Code Blocks",
+        "pass": true,
+        "detail": "Found 7 code block(s)"
+      },
+      {
+        "name": "Word Count (500-3000)",
+        "pass": true,
+        "detail": "1297 words"
       },
       {
         "name": "Has Anti-patterns/Failure Modes",
@@ -2133,6 +2044,95 @@
       }
     ],
     "score": 17,
+    "maxScore": 18
+  },
+  {
+    "name": "thinking-cynefin",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-cynefin/SKILL.md",
+    "sections": [
+      {
+        "name": "YAML Frontmatter",
+        "found": true
+      },
+      {
+        "name": "Overview",
+        "found": true
+      },
+      {
+        "name": "Core Principle",
+        "found": true
+      },
+      {
+        "name": "When to Use",
+        "found": true
+      },
+      {
+        "name": "Decision Flow",
+        "found": true
+      },
+      {
+        "name": "Process/Steps",
+        "found": true
+      },
+      {
+        "name": "Examples",
+        "found": true
+      },
+      {
+        "name": "Template",
+        "found": true
+      },
+      {
+        "name": "Verification Checklist",
+        "found": true
+      },
+      {
+        "name": "Key Questions",
+        "found": true
+      },
+      {
+        "name": "Wisdom/Attribution",
+        "found": true
+      }
+    ],
+    "quality": [
+      {
+        "name": "Description Length",
+        "pass": true,
+        "detail": "190 chars (max 200)"
+      },
+      {
+        "name": "Has Multiple Examples",
+        "pass": true,
+        "detail": "Found 4 example(s)"
+      },
+      {
+        "name": "Has Tables",
+        "pass": true,
+        "detail": "Found 7 table row(s)"
+      },
+      {
+        "name": "Has Checklists",
+        "pass": true,
+        "detail": "Found 8 checklist item(s)"
+      },
+      {
+        "name": "Has Code Blocks",
+        "pass": true,
+        "detail": "Found 6 code block(s)"
+      },
+      {
+        "name": "Word Count (500-3000)",
+        "pass": true,
+        "detail": "1118 words"
+      },
+      {
+        "name": "Has Anti-patterns/Failure Modes",
+        "pass": true,
+        "detail": "Found warnings"
+      }
+    ],
+    "score": 18,
     "maxScore": 18
   },
   {

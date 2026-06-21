@@ -117,6 +117,45 @@ A completed Occam's Razor analysis produces:
 
 For trigger-shrink cases, the output may be a single line: "Tested simplest hypothesis X — confirmed/refuted."
 
+## Template
+
+```markdown
+# Occam's Razor Analysis: [Bug/Problem]
+
+## Trigger Check
+- Simplest hypothesis: [description]
+- Testable in one step? [Yes → test and report / No → full procedure]
+
+## Hypothesis Ranking (fewest assumptions first)
+
+| # | Hypothesis | Assumptions | Count |
+|---|------------|-------------|-------|
+| A | [simplest] | [list each] | [n]   |
+| B | [next]     | [list each] | [n]   |
+| C | [complex]  | [list each] | [n]   |
+
+## Explanatory Power Check
+
+| Hypothesis | Fits evidence? | Notes |
+|------------|---------------|-------|
+| A          | [✓/✗]         | [why] |
+| B          | [✓/✗]         | [why] |
+
+## Test Order and Results
+1. [Hypothesis tested] → [confirmed/refuted] → [evidence]
+
+## Conclusion
+[Confirmed hypothesis or next to test]
+```
+
+## Verification Checklist
+- [ ] Listed all plausible hypotheses before testing any
+- [ ] Tested the simplest hypothesis that fits the evidence first
+- [ ] Did not skip to a complex hypothesis without ruling out simpler ones
+- [ ] Each hypothesis' assumptions are explicitly listed (not just gut "complexity")
+- [ ] Simpler hypotheses actually explain the evidence (explanatory power verified)
+- [ ] Escalated complexity only when evidence forced it, not on intuition
+
 ## Anti-Patterns
 
 | Anti-Pattern | Symptom | Correction |

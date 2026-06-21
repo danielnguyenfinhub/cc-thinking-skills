@@ -142,6 +142,86 @@ A completed KT Problem Analysis produces:
 5. **Confirmed Root Cause** — with verification evidence
 6. **If used, SA Triage** — prioritized concern list with assigned processes
 
+## Examples
+
+### Example: Regional API Latency
+
+```
+Problem: /checkout latency 4x in US-East only, started Monday 9 AM.
+
+IS/IS-NOT:
+  WHAT:  /checkout IS affected; /cart, /product IS NOT → payment processing
+  WHERE: US-East IS; EU, US-West IS NOT → single region
+  WHEN:  Monday 9 AM IS; before Monday IS NOT → recent change
+
+Distinction: payment processing + single region + Monday morning
+Change: fraud detection rules enabled Monday 8:45 AM
+Cause test: rules add DB queries → explains /checkout only + write ops
+Verification: disable rules in canary → latency normalizes ✓
+```
+
+### Example: Intermittent Test Failures
+
+```
+Problem: test_user_auth fails ~20% of CI runs, never locally.
+
+IS/IS-NOT:
+  WHAT:  test_user_auth IS; all other tests IS NOT → auth-specific
+  WHERE: CI IS; local IS NOT → environment difference
+  WHEN:  ~20% of runs IS; 80% IS NOT → intermittent/timing
+  EXTENT: only when run after test_session_cleanup IS → ordering dependency
+
+Distinction: auth + CI-only + after session cleanup
+Change: test_session_cleanup added last sprint, clears shared session store
+Verification: run tests in isolation → passes 100% ✓
+Root cause: shared session state between tests
+```
+
+## Template
+
+```markdown
+# KT Problem Analysis: [Problem Name]
+
+## Problem Statement
+[Specific, measurable deviation from expected behavior]
+
+## IS / IS-NOT Matrix
+
+| Dimension | IS (affected) | IS NOT (not affected) | Distinction |
+|-----------|---------------|----------------------|-------------|
+| WHAT — object | | | |
+| WHAT — defect | | | |
+| WHERE — location | | | |
+| WHERE — on object | | | |
+| WHEN — first seen | | | |
+| WHEN — pattern | | | |
+| EXTENT — how many | | | |
+| EXTENT — trend | | | |
+
+## Distinctions
+- [What's unique about the IS side?]
+
+## Changes Near First Observation
+- [What changed in/on/around the distinctions?]
+
+## Cause Testing
+
+| Possible Cause | Explains IS? | Explains IS-NOT? | Verdict |
+|----------------|-------------|------------------|---------|
+| | | | |
+
+## Confirmed Root Cause
+[Cause + verification evidence]
+```
+
+## Verification Checklist
+- [ ] Problem is selective (not 100% failure) — IS/IS-NOT has a boundary to contrast
+- [ ] IS/IS-NOT matrix filled across at least WHAT, WHERE, WHEN dimensions
+- [ ] Distinctions extracted — what's unique about the IS side is explicitly stated
+- [ ] Changes near the first observation time are identified
+- [ ] Each candidate cause tested against BOTH IS and IS-NOT
+- [ ] Root cause confirmed with verification evidence, not just plausibility
+
 ## Anti-Patterns
 
 | Anti-Pattern | Symptom | Correction |

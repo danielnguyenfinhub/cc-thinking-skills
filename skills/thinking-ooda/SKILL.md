@@ -123,5 +123,44 @@ LOOP:    update the hypothesis from the result
 - "How will I know in the next 2 minutes whether it worked?"
 - "Am I cycling, or stuck in one phase?"
 
+## Template
+
+```markdown
+# OODA Loop: [Incident/Situation]
+
+## Loop [N]
+
+### Observe
+- Current state: [metrics, errors, alerts]
+- Recent changes: [deploys, config, traffic]
+- Feedback from last action: [result of previous loop, or N/A]
+
+### Orient
+- Pattern match: [what does this resemble?]
+- Hypothesis 1: [primary]
+- Hypothesis 2: [alternative]
+- Mental model update: [what changed in my understanding?]
+
+### Decide
+- Action: [what to do]
+- Tests hypothesis: [which one]
+- Confidence: [~70% is enough for reversible actions]
+- Will observe next: [what confirms or refutes]
+- Fallback if wrong: [next action]
+
+### Act
+- Executed: [what was done]
+- Immediate observation: [result]
+- Loop again? [Yes → back to Observe / No → stable, done]
+```
+
+## Verification Checklist
+- [ ] Situation is genuinely time-sensitive (not just uncomfortable uncertainty)
+- [ ] Held at least two hypotheses during Orient (not locked onto one)
+- [ ] Acted on ~70% confidence for reversible actions (didn't wait for certainty)
+- [ ] Observed the result immediately after acting (didn't wait blindly)
+- [ ] Actually looped (went back to Observe after Act, didn't stop at one cycle)
+- [ ] Did not apply OODA to irreversible/high-blast-radius actions without extra caution
+
 ## Boyd's Insight
 "He who can handle the quickest rate of change survives." The goal isn't just making decisions—it's making and revising them faster than the situation compounds. Speed creates options; delay eliminates them.
