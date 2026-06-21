@@ -107,6 +107,46 @@ Multiple processes → Same resource → Lock contention → Serialization
 ```
 **Mitigation:** Sharding, optimistic locking, resource isolation
 
+## Examples
+
+### Example: Retry Storm Cascading Failure
+
+```
+Symptom: API gateway returning 503s, error rate climbing.
+
+System map:
+  Client → API Gateway → Service A → Service B → Database
+
+Feedback loop (reinforcing):
+  Service B slow → Gateway retries → More load on B → B slower → More retries
+
+Trace upstream:
+  Database connection pool exhausted → Service B blocks → A times out → Gateway retries
+
+Root cause: Database connection pool too small for current traffic, amplified by
+  retry storm (reinforcing loop with no circuit breaker).
+
+Fix: Add circuit breaker at Gateway→A boundary, increase DB pool, add backpressure.
+```
+
+### Example: Deploy Velocity Death Spiral
+
+```
+Symptom: Team shipping slower despite adding engineers.
+
+System map:
+  More engineers → More code → More bugs → More firefighting
+                                         → Less time for features → Pressure to ship faster
+                                                                   → More shortcuts → More bugs
+
+Feedback loops:
+  Reinforcing: bugs → firefighting → shortcuts → more bugs
+  Balancing (absent): no automated testing to catch bugs early
+
+Leverage: Add CI/test coverage (information flow, level 6) rather than
+  adding more engineers (parameter, level 12).
+```
+
 ## Key Concepts
 
 ### 1. Feedback Loops

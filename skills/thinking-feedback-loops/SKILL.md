@@ -453,6 +453,37 @@ Once you've found the dominant loop, intervene at the highest-leverage point you
 - "What's the highest-leverage intervention available?"
 - "If I change X, what loops are affected?"
 
+## Template
+
+```markdown
+# Feedback Loop Analysis: [System/Behavior]
+
+## Observed Behavior
+[Runaway growth / oscillation / resistance to change / other dynamic]
+
+## Loop Map
+
+### Loop 1: [Name]
+- Type: [Reinforcing / Balancing]
+- Variables: [A] →(+/-)→ [B] →(+/-)→ [C] →(+/-)→ [A]
+- Delay: [where in the loop, how long]
+- Currently dominant? [Yes / No]
+
+### Loop 2: [Name]
+- Type: [Reinforcing / Balancing]
+- Variables: [...]
+- Delay: [...]
+- Currently dominant? [Yes / No]
+
+## Dominant Loop
+[Which loop is currently driving the observed behavior?]
+
+## Intervention
+- Target: [variable or connection to change]
+- Leverage level: [parameter / feedback / information / rule / goal]
+- Expected effect: [how this changes the loop dynamics]
+```
+
 ## Meadows' Wisdom
 
 "We can't control systems or figure them out. But we can dance with them."

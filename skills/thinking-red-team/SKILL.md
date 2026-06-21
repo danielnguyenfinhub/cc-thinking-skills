@@ -140,3 +140,59 @@ Findings without a complete attack path are excluded from the report. A report w
 | **Skipping the adversary model** | Attacking without defining who the attacker is and what access they have | Define the adversary profile first; attacks make sense only in context |
 | **Missing the attack path** | Reporting a vulnerability without showing how to reach it | Every finding needs: entry point → steps → impact |
 | **Scanner-as-substitute** | Running a SAST tool and reporting its output without adversarial thinking | The tool finds patterns; red-teaming finds exploitable paths |
+
+## Template
+
+```markdown
+# Red Team Report: [Target System]
+
+## Scope
+- Target: [System/component under review]
+- In scope: [What to attack]
+- Out of scope: [What to skip]
+- Goal: [What constitutes a successful attack]
+
+## Attack Surface
+
+| Surface | Exposure | Trust Boundary |
+|---------|----------|----------------|
+| | | |
+
+## Findings
+
+### Finding 1: [Title]
+- Severity: [Critical / High / Medium / Low]
+- Attack path:
+  - Entry point: [URL, endpoint, parameter, file]
+  - Steps: [1. Send X, 2. Observe Y, 3. Escalate to Z]
+  - Realized impact: [What the attacker actually achieves]
+- Remediation: [Concrete fix]
+
+## Defense Bypass Results
+
+| Defense | Bypass Attempt | Result |
+|---------|---------------|--------|
+| | | [BYPASSED / RESISTED] |
+
+## Summary
+- Total findings: [N]
+- Critical: [N] | High: [N] | Medium: [N] | Low: [N]
+- Findings without reproducible attack path: [dropped]
+```
+
+## Verification Checklist
+- [ ] Target and scope explicitly defined before starting
+- [ ] Adversary profiles identified (external, authenticated, insider)
+- [ ] Attack surface enumerated with trust boundaries
+- [ ] Every reported finding has a concrete, reproducible attack path
+- [ ] Findings without demonstrable attack paths were dropped (anti-fabrication gate)
+- [ ] Defense bypass attempts documented for each defense encountered
+- [ ] Remediations are concrete and actionable, not generic "best practice" advice
+
+## Key Questions
+- "If I wanted to cause maximum damage with this access level, how would I?"
+- "Can I actually demonstrate this attack, or am I speculating?"
+- "What trust boundary am I trying to cross?"
+- "Which defenses are in place, and can I bypass them?"
+- "Is this a real finding or am I padding the report?"
+- "What's the simplest attack an outsider would try first?"

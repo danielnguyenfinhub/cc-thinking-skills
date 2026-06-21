@@ -157,6 +157,15 @@ Action: trace the actual SSO code path; add test coverage for it
 - [ ] Noted uncovered aspects (what no map shows)
 - [ ] Did not re-verify something already confirmed this session
 
+## Key Questions
+
+- "Am I reasoning from the code, or from a description of the code?"
+- "When was this doc/comment/test last verified against the running system?"
+- "What does the actual code do — not what should it do?"
+- "Have I reproduced the behavior, or am I theorizing?"
+- "Is this map authoritative (generated, schema-derived) or hand-maintained?"
+- "Does this mismatch change my action, or can I note it and move on?"
+
 ## Anti-Patterns
 
 | Anti-Pattern | Symptom | Correction |

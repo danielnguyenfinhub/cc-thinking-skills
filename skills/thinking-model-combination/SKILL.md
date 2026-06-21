@@ -40,6 +40,20 @@ Analyzing a problem?
   → Are stakes high enough to justify deeper analysis? → yes → USE MULTIPLE MODELS
 ```
 
+## The Combination Process
+
+### Step 1: Characterize the Problem
+Determine why a single model is insufficient. Identify the domains, dimensions, or blind spots that require multiple lenses.
+
+### Step 2: Select Models (Max 3-4)
+Choose models where each has a distinct, named role. Every model must answer a question the others cannot. If you can't name its unique contribution, drop it.
+
+### Step 3: Choose a Combination Pattern
+Pick how the models relate: sequential (pipeline), parallel (lenses), nested (zoom), adversarial (thesis-antithesis), or temporal (phases). Define the tiebreaker model for conflicts.
+
+### Step 4: Synthesize and Decide
+Apply the models per your chosen pattern. Identify convergence (agreement), divergence (conflict), and unique contributions. Resolve conflicts using the tiebreaker. Produce a single combined conclusion.
+
 ## Combination Patterns
 
 ### Pattern 1: Sequential (Pipeline)

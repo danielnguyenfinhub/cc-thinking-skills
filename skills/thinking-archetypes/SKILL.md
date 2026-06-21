@@ -83,6 +83,63 @@ Match the symptom to the pattern; the Key Question points at the leverage.
 - [ ] Intervention targets structure, not the recurring symptom
 - [ ] Considered the side effects of the intervention
 
+## Examples
+
+### Example: Alert Fatigue (Fixes That Fail)
+
+```
+Symptom: Too many alerts firing → team silences noisy alerts
+Fix applied: Raise alert thresholds to reduce noise
+Result: Fewer alerts, but real incidents now go unnoticed → outage
+Side effect: Threshold raised again → even less visibility
+Archetype: Fixes That Fail — the fix (silencing) creates a delayed side effect (blindness)
+Leverage: Add alert quality review process instead of raising thresholds
+```
+
+### Example: Feature Flag Debt (Shifting the Burden)
+
+```
+Symptom: Need to ship faster without breaking prod
+Workaround: Wrap everything in feature flags
+Result: Flags pile up, nobody removes them, combinatorial complexity grows
+Fundamental fix atrophying: proper testing, staged rollouts, modular design
+Archetype: Shifting the Burden — the workaround (flags) substitutes for the real fix (test/deploy pipeline)
+Leverage: Invest in the deploy pipeline; enforce flag expiry dates
+```
+
+## Template
+
+```markdown
+# Archetype Analysis: [Recurring Problem]
+
+## Problem Description
+- Symptoms: [What keeps happening]
+- What's been tried: [Previous fixes]
+- Why it recurs: [What comes back]
+
+## Loop Sketch
+[Reinforcing loops, balancing loops, and delays]
+
+## Archetype Match
+- Pattern: [Fixes That Fail / Shifting the Burden / Limits to Growth / etc.]
+- Key Question: [From the Quick Reference Card]
+- Confidence: [High / Medium / Low]
+
+## Structural Intervention
+- Target: [The structure driving the pattern, not the symptom]
+- Action: [What to change at the structural level]
+- Expected result: [How this breaks the recurring pattern]
+- Side effects to watch: [What the intervention itself might cause]
+```
+
+## Key Questions
+- "Have we seen this problem before — and did the same fix work last time?"
+- "What side effect will this fix create?"
+- "What capability are we not building by leaning on this workaround?"
+- "What will limit us at 10x scale?"
+- "Who owns the long-term health of this shared resource?"
+- "Are we starving future successes to feed current ones?"
+
 ## Senge's Wisdom
 
 "Structures of which we are unaware hold us prisoner. Once we can see them, they no longer have the same hold on us."

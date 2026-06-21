@@ -163,6 +163,73 @@ Inversion + Pre-Mortem creates powerful risk identification:
 2. **Pre-Mortem**: Imagine it DID fail, explain why (narrative)
 3. **Synthesize**: Combine both lists, prioritize, mitigate
 
+## Examples
+
+### Example: Auth System Design
+
+```
+Goal: Ship a reliable authentication system
+
+Inversions (how to guarantee failure):
+1. Store passwords in plaintext
+2. No rate limiting on login attempts
+3. No monitoring or alerting on auth failures
+4. Skip security review before launch
+
+Top inversions → requirements:
+- "Store plaintext" → Use bcrypt with work factor ≥ 12
+- "No rate limiting" → Rate limit + exponential backoff + account lockout
+- "No monitoring" → Alert on auth failure rate spike > 3x baseline
+```
+
+### Example: API Migration
+
+```
+Goal: Migrate from REST API v1 to v2 without downtime
+
+Inversions (how to guarantee failure):
+1. Cut over all clients at once with no rollback
+2. Change response format without versioning
+3. Don't test with production traffic patterns
+4. No feature parity check between v1 and v2
+
+Top inversions → requirements:
+- "Cut over at once" → Gradual rollout with per-client routing
+- "No rollback" → Keep v1 running, traffic-shift back in < 5 min
+- "No parity check" → Automated v1/v2 response comparison in shadow mode
+```
+
+## Template
+
+```markdown
+# Inversion Analysis: [Goal]
+
+## Goal
+[What success looks like]
+
+## Inversions: How to Guarantee Failure
+1. [Failure path]
+2. [Failure path]
+3. [Failure path]
+...  (aim for 10+)
+
+## Categorized Failures
+
+| Category | Failure Mode | Severity |
+|----------|--------------|----------|
+| | | [Critical / High / Medium / Low] |
+
+## Avoidance Requirements (top 3-5)
+
+| Anti-goal | → Requirement |
+|-----------|---------------|
+| [Failure to avoid] | [Concrete requirement] |
+
+## Plan Check
+- [ ] Plan addresses each top inversion
+- [ ] No critical inversion left unmitigated
+```
+
 ## Common Inversions for Software
 
 | Domain | Goal | Key Inversions to Avoid |

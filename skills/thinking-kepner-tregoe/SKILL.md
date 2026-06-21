@@ -222,6 +222,15 @@ Root cause: shared session state between tests
 - [ ] Each candidate cause tested against BOTH IS and IS-NOT
 - [ ] Root cause confirmed with verification evidence, not just plausibility
 
+## Key Questions
+
+- "What IS affected vs what IS NOT affected?"
+- "What is different about the IS cases — what distinction exists that the IS-NOT cases lack?"
+- "When did this first appear, and what changed near that time?"
+- "Does the candidate cause explain BOTH the IS and IS-NOT sides?"
+- "Is this 100% failure (no boundary to contrast) or selective?"
+- "Have I tested my cause against the IS-NOT column, not just the IS column?"
+
 ## Anti-Patterns
 
 | Anti-Pattern | Symptom | Correction |

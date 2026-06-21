@@ -397,6 +397,32 @@ Run pre-mortem to validate aspiration level:
 - "Am I searching for best, or searching to avoid deciding?"
 - "What threshold would I set for someone else in my position?"
 
+## Template
+
+```markdown
+# Satisficing Decision: [Decision Name]
+
+## Decision Context
+- What's being decided: [description]
+- Why satisficing (not optimizing): [time constraint / low stakes / reversible / diminishing returns]
+
+## Aspiration Level
+- Minimum acceptable criteria:
+  1. [Criterion]: [threshold]
+  2. [Criterion]: [threshold]
+  3. [Criterion]: [threshold]
+
+## Search and Evaluation
+| Option | Meets criteria? | Notes |
+|--------|----------------|-------|
+| [First option meeting threshold] | [✓/✗ per criterion] | |
+
+## Decision
+- Selected: [option]
+- Meets all thresholds: [Yes]
+- Stopped searching: [Yes — threshold met]
+```
+
 ## Simon's Insight
 
 "A wealth of information creates a poverty of attention."

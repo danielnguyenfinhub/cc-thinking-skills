@@ -32,6 +32,24 @@ Stated problem is a vague symptom?                   → yes → QUESTION DOWN T
 - **During execution of an agreed plan.** Clarify before building; once the spec is settled, stopping to re-question every step is friction, not rigor.
 - **A genuine emergency / time-pressured incident** where acting on 70% understanding beats a round of questions — clarify the one thing that's load-bearing, then act.
 
+## Procedure
+
+### Step 1: Detect the Ambiguity
+
+Before building, check: is the request vague, assumption-laden, or resting on an unstated premise? If it's already clear and specified, skip — just do the work.
+
+### Step 2: Ask the Load-Bearing Question
+
+Lead with the one question whose answer most changes what you'll build. Don't ask everything — ask the one or two that gate the work.
+
+### Step 3: Follow the Thread
+
+Let each answer narrow the next question. Don't work from a fixed script — adapt based on what surfaces.
+
+### Step 4: Resolve What You Can Yourself
+
+Only ask the user what you can't determine by reading the code, running a command, or checking the docs.
+
 ## The Six Types of Socratic Questions
 
 ### 1. Clarification Questions
@@ -185,7 +203,29 @@ Meta: "Is the real question about event sourcing or auditability?"
 - [ ] Reached deeper understanding than starting point
 - [ ] Documented key insights from questioning
 
-## Key Meta-Questions
+## Template
+
+```markdown
+# Socratic Clarification: [Request/Topic]
+
+## Original Request
+[What was asked — verbatim or paraphrased]
+
+## Ambiguity/Assumption Detected
+[What's vague, unstated, or assumed]
+
+## Questions Asked
+1. [Question] → [Answer received]
+2. [Question] → [Answer received]
+
+## Clarified Understanding
+[What we now know that we didn't before]
+
+## Revised Spec / Next Action
+[What to build/do, given the clarified understanding]
+```
+
+## Key Questions
 - "What do I think I know, and how do I know it?"
 - "What question am I not asking?"
 - "What would change my mind about this?"

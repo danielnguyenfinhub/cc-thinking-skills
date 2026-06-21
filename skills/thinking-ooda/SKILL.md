@@ -38,7 +38,7 @@ If the action is irreversible or high-blast-radius, gather more information befo
 
 ## The Four Phases
 
-### 1. OBSERVE — gather current state fast
+### Step 1: OBSERVE — gather current state fast
 - Current metrics, logs, alerts, error rates
 - What changed recently (deploys, config, traffic)
 - Feedback from your last action
@@ -49,7 +49,7 @@ Incident: error rate 10x normal; affects API gateway + user service;
 started 5 min ago; a deploy went out 15 min ago; users report login failures.
 ```
 
-### 2. ORIENT — make sense of it (the critical phase)
+### Step 2: ORIENT — make sense of it (the critical phase)
 Match the observations to a pattern and form a hypothesis. This is where most loops go wrong: don't lock onto the first framing. Hold ≥2 candidate explanations and let new evidence shift you.
 
 ```
@@ -58,7 +58,7 @@ The deploy touched auth rate-limiting.
 Hypothesis: rate-limit config is too aggressive.
 ```
 
-### 3. DECIDE — pick an action under uncertainty
+### Step 3: DECIDE — pick an action under uncertainty
 - State the action and the hypothesis it tests.
 - 70% confidence now beats 90% too late, for a reversible action.
 - Decide what you'll observe next to confirm or refute.
@@ -69,7 +69,7 @@ Hypothesis: this restores normal error rates.
 Will watch: error rate for 2 minutes; fallback = investigate DB connections.
 ```
 
-### 4. ACT — execute, then immediately re-observe
+### Step 4: ACT — execute, then immediately re-observe
 Execute decisively and go straight back to OBSERVE. The action creates new information; don't wait blindly for it to "settle."
 
 ```
@@ -105,6 +105,37 @@ ORIENT:  form a hypothesis about the cause
 DECIDE:  test the most likely hypothesis first
 ACT:     add logging / try the fix / eliminate the possibility
 LOOP:    update the hypothesis from the result
+```
+
+## Examples
+
+### Example: Memory Leak in Production
+
+```
+OBSERVE: Memory usage climbing 5%/hour on service-api pods. No recent deploys.
+         Heap dumps show growing Map in session middleware.
+ORIENT:  Hypothesis A: session objects not being garbage collected (leak in middleware).
+         Hypothesis B: traffic pattern changed, more concurrent sessions.
+         Evidence favors A — traffic is flat, memory is not.
+DECIDE:  Restart one pod to confirm leak pattern restarts. Check session middleware
+         for missing cleanup on disconnect.
+ACT:     Restarted pod — memory climb resumed within 10 min. Found: session.on('close')
+         handler was registered but never fired due to missing socket timeout config.
+         Fix: add socket timeout. Memory stabilized.
+```
+
+### Example: Flaky Feature Flag Rollout
+
+```
+OBSERVE: Feature flag enabled for 10% of users. Error rate up 2x but only in EU region.
+         Flag is supposedly random by user ID, not region-based.
+ORIENT:  Hypothesis A: EU users hit a code path the flag doesn't cover.
+         Hypothesis B: Flag hash function clusters EU user IDs into the enabled bucket.
+         B explains the regional skew better.
+DECIDE:  Check flag evaluation logs — what % of EU vs US users are actually flagged?
+ACT:     Confirmed: 35% of EU users flagged (vs expected 10%). Hash function used
+         sequential user IDs, and EU batch had contiguous IDs. Fix: switch to random hash.
+         Re-rolled flag with uniform distribution.
 ```
 
 ## Common Failure Modes

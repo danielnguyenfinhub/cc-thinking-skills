@@ -361,6 +361,29 @@ Solution: Shift to "fail fast + shed load" (Level 2)
 | Same bug class recurs | Patch each instance (12) | Make it unrepresentable via type/schema (10, 4) |
 | Hidden, wrong defaults | Tune the value (12) | Make the config visible/validated (6, 5) |
 
+## Template
+
+```markdown
+# Leverage Point Analysis: [System/Problem]
+
+## Current Interventions
+| Intervention | Leverage Level | Why It's Not Working |
+|---|---|---|
+| | | |
+
+## Higher-Leverage Alternatives
+| Current (Level) | Higher Alternative (Level) | Feasibility | Expected Effect |
+|---|---|---|---|
+| | | | |
+
+## Selected Intervention
+- Target: [what to change]
+- Leverage level: [number and name]
+- Why this level: [rationale]
+- Expected resistance: [what pushes back]
+- How to address resistance: [strategy]
+```
+
 ## Verification Checklist
 
 - [ ] Identified current intervention points

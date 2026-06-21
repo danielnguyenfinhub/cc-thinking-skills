@@ -15,6 +15,17 @@ This is the **master routing skill** for all mental models. Instead of knowing 3
 
 **If you already know the right model, invoke it directly — don't route.** This skill is for when you're *unsure* which model fits. If the problem obviously calls for a specific model (e.g., "where's the bottleneck?" → theory-of-constraints; "how would an attacker break this?" → red-team), go straight to it. Routing is overhead you only pay when the match isn't obvious. Likewise, if no model clearly helps, just reason directly — don't force one.
 
+## When to Use
+- You're facing a problem and don't know which thinking framework fits best
+- You want structured reasoning but aren't sure which model to invoke
+- You're triaging between multiple possible approaches
+
+```
+Unsure which thinking model to use?
+  → Yes → START HERE — identify domain + problem type → route to model
+  → No → Already know? → invoke it directly; skip the router
+```
+
 ## Quick Router
 
 ### Step 1: What's Your Domain?
@@ -322,6 +333,45 @@ Use **Model Combination** when:
 | Innovation under constraints | Sequential | First Principles → TRIZ → Effectuation |
 | Career decision | Temporal | 5 Whys (past) → Circle of Competence (present) → Regret Min (future) |
 
+## Examples
+
+### Example: Production Latency Spike
+
+```
+Context: P99 latency jumped 3x after a deploy, affecting one region.
+Domain: Coding — this is a runtime issue in a deployed system.
+Problem type: Diagnose — something broke, find the cause.
+
+Routing:
+- Selective failure (one region, not all) → thinking-kepner-tregoe (IS/IS-NOT)
+- If root cause unclear after KT → thinking-five-whys-plus
+- If fix in one place breaks another → thinking-systems
+
+Don't use: thinking-first-principles (this isn't a constraint challenge),
+           thinking-pre-mortem (the failure already happened)
+```
+
+### Example: Choosing a State Management Library
+
+```
+Context: New React app needs state management; team debating Redux vs Zustand vs Jotai.
+Domain: Architecture — structural decision with lasting consequences.
+Problem type: Decide — pick among alternatives.
+
+Routing:
+- Reversible? Partially (refactoring state later is expensive) → optimize, don't satisfice
+- Primary: thinking-opportunity-cost (what do we give up with each choice?)
+- Secondary: thinking-second-order (what cascading effects does each have on DX, hiring, testing?)
+
+Don't use: thinking-occams-razor (not a diagnostic), thinking-ooda (not time-pressured)
+```
+
+## When NOT to Use
+
+- The problem clearly maps to a single model you already know fits — just use it; routing adds overhead.
+- You're mid-incident and need to act — start with `thinking-ooda`, don't stop to route.
+- The decision is trivial or easily reversible — pick any adequate approach and move on.
+
 ## Template
 
 ```markdown
@@ -339,13 +389,14 @@ Combination pattern: [Sequential/Parallel/Nested/None]
 
 ## Application
 [Apply the selected model(s) here]
-
-## Verification
-- [ ] Domain correctly identified
-- [ ] Problem type matches
-- [ ] Model fits the situation
-- [ ] Considered if combination needed
 ```
+
+## Verification Checklist
+- [ ] Domain correctly identified (Coding/Architecture/Product/Strategy/Personal/Abstract/Risk/Innovation)
+- [ ] Problem type matches (Diagnose/Decide/Understand/Create/Evaluate/Predict/Optimize)
+- [ ] Routed model fits the situation — not just the most familiar one
+- [ ] Considered whether a single model suffices or combination is needed
+- [ ] If model is already known, skipped the router and invoked directly
 
 ## Key Questions
 
