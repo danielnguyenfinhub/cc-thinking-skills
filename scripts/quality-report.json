@@ -1,7 +1,7 @@
 [
   {
     "name": "thinking-cynefin",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-cynefin/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-cynefin/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -90,7 +90,7 @@
   },
   {
     "name": "thinking-occams-razor",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-occams-razor/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-occams-razor/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -179,7 +179,7 @@
   },
   {
     "name": "thinking-debiasing",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-debiasing/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-debiasing/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -268,7 +268,7 @@
   },
   {
     "name": "thinking-kepner-tregoe",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-kepner-tregoe/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-kepner-tregoe/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -357,7 +357,7 @@
   },
   {
     "name": "thinking-map-territory",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-map-territory/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-map-territory/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -446,7 +446,7 @@
   },
   {
     "name": "thinking-ooda",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-ooda/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-ooda/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -535,7 +535,7 @@
   },
   {
     "name": "thinking-triz",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-triz/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-triz/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -624,7 +624,7 @@
   },
   {
     "name": "thinking-archetypes",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-archetypes/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-archetypes/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -713,7 +713,7 @@
   },
   {
     "name": "thinking-five-whys-plus",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-five-whys-plus/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-five-whys-plus/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -802,7 +802,7 @@
   },
   {
     "name": "thinking-model-router",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-model-router/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-model-router/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -891,7 +891,7 @@
   },
   {
     "name": "thinking-red-team",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-red-team/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-red-team/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -980,7 +980,7 @@
   },
   {
     "name": "thinking-circle-of-competence",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-circle-of-competence/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-circle-of-competence/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1069,7 +1069,7 @@
   },
   {
     "name": "thinking-inversion",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-inversion/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-inversion/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1158,7 +1158,7 @@
   },
   {
     "name": "thinking-second-order",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-second-order/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-second-order/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1247,7 +1247,7 @@
   },
   {
     "name": "thinking-socratic",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-socratic/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-socratic/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1336,7 +1336,7 @@
   },
   {
     "name": "thinking-dual-process",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-dual-process/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-dual-process/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1425,7 +1425,7 @@
   },
   {
     "name": "thinking-systems",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-systems/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-systems/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1514,7 +1514,7 @@
   },
   {
     "name": "thinking-bayesian",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-bayesian/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-bayesian/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1603,7 +1603,7 @@
   },
   {
     "name": "thinking-bounded-rationality",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-bounded-rationality/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-bounded-rationality/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1692,7 +1692,7 @@
   },
   {
     "name": "thinking-feedback-loops",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-feedback-loops/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-feedback-loops/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1781,7 +1781,7 @@
   },
   {
     "name": "thinking-first-principles",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-first-principles/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-first-principles/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1870,7 +1870,7 @@
   },
   {
     "name": "thinking-leverage-points",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-leverage-points/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-leverage-points/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -1959,7 +1959,7 @@
   },
   {
     "name": "thinking-model-combination",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-model-combination/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-model-combination/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2048,7 +2048,7 @@
   },
   {
     "name": "thinking-pre-mortem",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-pre-mortem/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-pre-mortem/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2137,7 +2137,7 @@
   },
   {
     "name": "thinking-effectuation",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-effectuation/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-effectuation/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2226,7 +2226,7 @@
   },
   {
     "name": "thinking-fermi-estimation",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-fermi-estimation/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-fermi-estimation/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2315,7 +2315,7 @@
   },
   {
     "name": "thinking-jobs-to-be-done",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-jobs-to-be-done/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-jobs-to-be-done/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2404,7 +2404,7 @@
   },
   {
     "name": "thinking-lindy-effect",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-lindy-effect/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-lindy-effect/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2493,7 +2493,7 @@
   },
   {
     "name": "thinking-margin-of-safety",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-margin-of-safety/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-margin-of-safety/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2582,7 +2582,7 @@
   },
   {
     "name": "thinking-model-selection",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-model-selection/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-model-selection/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2671,7 +2671,7 @@
   },
   {
     "name": "thinking-opportunity-cost",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-opportunity-cost/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-opportunity-cost/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2760,7 +2760,7 @@
   },
   {
     "name": "thinking-probabilistic",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-probabilistic/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-probabilistic/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2849,7 +2849,7 @@
   },
   {
     "name": "thinking-regret-minimization",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-regret-minimization/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-regret-minimization/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -2938,7 +2938,7 @@
   },
   {
     "name": "thinking-reversibility",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-reversibility/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-reversibility/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -3027,7 +3027,7 @@
   },
   {
     "name": "thinking-scientific-method",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-scientific-method/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-scientific-method/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -3116,7 +3116,7 @@
   },
   {
     "name": "thinking-steel-manning",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-steel-manning/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-steel-manning/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -3205,7 +3205,7 @@
   },
   {
     "name": "thinking-theory-of-constraints",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-theory-of-constraints/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-theory-of-constraints/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -3294,7 +3294,7 @@
   },
   {
     "name": "thinking-thought-experiment",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-thought-experiment/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-thought-experiment/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
@@ -3383,7 +3383,7 @@
   },
   {
     "name": "thinking-via-negativa",
-    "path": "/Users/tjboudreaux/Sandbox/cc-thinking-skills/skills/thinking-via-negativa/SKILL.md",
+    "path": "/home/user/cc-thinking-skills/skills/thinking-via-negativa/SKILL.md",
     "sections": [
       {
         "name": "YAML Frontmatter",
