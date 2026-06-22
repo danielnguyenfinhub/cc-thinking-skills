@@ -238,6 +238,27 @@ Verified: "Assume it failed — what's the most likely reason?"
 ### With OODA Loop
 Under genuine time pressure (an incident), act on the fast answer at ~70% confidence and re-observe — don't stall on verification. Reserve the full pass for after, or for the irreversible step within the incident.
 
+## Template
+
+```markdown
+# Dual-Process Check: [Task/Claim]
+
+## Fast Answer
+[What came to mind immediately]
+
+## Trigger Check
+- Answer came easily? [Yes / No]
+- High stakes or unfamiliar domain? [Yes / No]
+- Both true? → Run verification pass
+
+## Verification Pass
+1. RE-STATE: [Write the claim explicitly]
+2. RE-DERIVE: [Reach it a second way — or test/run it]
+3. CHECK: [Against ground truth: code, docs, data, math]
+4. RECONCILE: [Do the two paths agree? If not, why?]
+5. COMMIT: [Verified answer]
+```
+
 ## When the Fast Answer Is Trustworthy
 
 The fast path is not the enemy — it's correct most of the time, and over-verifying is its own failure. Lean on the fast answer when:

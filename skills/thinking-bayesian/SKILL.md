@@ -261,6 +261,32 @@ Track predictions and outcomes:
 - "Am I anchoring on the evidence and ignoring base rates?"
 - "How would I bet on this? At what odds?"
 
+## Template
+
+```markdown
+# Bayesian Update: [Question/Hypothesis]
+
+## Prior
+- Belief before evidence: [description]
+- Prior probability: [P(H) = X%]
+- Basis for prior: [base rate / previous evidence / reference class]
+
+## New Evidence
+- Evidence observed: [what happened]
+- P(evidence | hypothesis true): [X%]
+- P(evidence | hypothesis false): [X%]
+- Likelihood ratio: [true rate / false rate]
+
+## Posterior
+- Updated probability: [P(H|E) = X%]
+- Update direction: [stronger / weaker / unchanged]
+- Confidence level: [how I'd bet on this]
+
+## Calibration Check
+- Am I anchoring on the evidence and ignoring the base rate?
+- Would I bet real money at these odds?
+```
+
 ## Kahneman's Warning
 "People tend to assess the relative importance of issues by the ease with which they are retrieved from memory—and this is largely determined by the extent of coverage in the media."
 

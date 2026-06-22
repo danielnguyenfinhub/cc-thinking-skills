@@ -137,3 +137,71 @@ A completed Five Whys Plus analysis produces:
 | **Single-cause bias** | Assuming one root cause without branching | At each step, ask "what else could cause this?" and rule out alternatives |
 | **Confirmation bias** | Finding the cause you expected to find | Devil's advocate review; ask "what evidence contradicts this?" |
 | **Ritualistic chaining** | Asking five whys when one would do | Stop when the counterfactual test passes and the stop condition is met |
+
+## Template
+
+```markdown
+# Five Whys Plus: [Problem Name]
+
+## Problem Statement
+- What happened: [Specific observable symptom]
+- Localized to: [Component/subsystem]
+- When: [Time range]
+- Impact: [Scope and severity]
+
+## Evidence Chain
+
+### Why #1: Why did [problem] occur?
+- Answer: [Hypothesis]
+- Evidence: [Logs, metrics, code]
+- Confidence: [High / Medium / Low]
+- Alternatives considered: [What else, ruled out because...]
+
+### Why #2: Why did [answer #1] occur?
+- Answer: [Hypothesis]
+- Evidence: [Logs, metrics, code]
+- Confidence: [High / Medium / Low]
+- Alternatives considered: [What else, ruled out because...]
+
+[Continue until stop condition met]
+
+## Counterfactual Test
+"Would the problem NOT have occurred if [root cause] were absent?"
+Answer: [Yes / No / Maybe — if not Yes, keep going]
+
+## Stop Condition Check
+- [ ] Actionable: can take concrete action
+- [ ] Controllable: within our control
+- [ ] Fundamental: fixing this prevents recurrence
+- [ ] Evidenced: supported by data, not speculation
+- [ ] Counterfactual: problem wouldn't have occurred without this
+- [ ] Not-blame: system/process issue, not "someone messed up"
+
+## Root Cause
+[Primary cause + any contributing factors]
+
+## Recommended Actions
+| Action | Addresses | Owner | Timeline |
+|--------|-----------|-------|----------|
+| | | | |
+
+## Verification Plan
+[How to confirm the fix worked]
+```
+
+## Verification Checklist
+- [ ] Fault was localized before starting (not running Five Whys on an unlocalized problem)
+- [ ] Every "why" answer is backed by evidence, not speculation
+- [ ] Alternative causes considered and ruled out at each step
+- [ ] Counterfactual test applied: problem wouldn't have occurred without root cause
+- [ ] All six stop-condition criteria met before stopping
+- [ ] Did NOT stop at human error — asked "why was the mistake possible?"
+- [ ] Devil's advocate review completed
+
+## Key Questions
+- "Why did this happen?" (the chain)
+- "What evidence supports this answer?"
+- "What else could have caused this?"
+- "Would the problem NOT have occurred if this cause were absent?"
+- "Why was this mistake possible?" (never stop at human error)
+- "Is this a system/process gap, or am I assigning blame?"

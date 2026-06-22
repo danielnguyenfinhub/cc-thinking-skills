@@ -52,16 +52,16 @@ If evidence already points to a specific cause, follow the evidence — don't do
 
 ## Procedure
 
-### Trigger Check (Fast Path)
+### Step 1: Trigger Check (Fast Path)
 
 Before running the full procedure, ask: **"Can I test the simplest hypothesis in one step?"**
 
 - Yes → Test it. If confirmed, report and stop. If falsified, move to the next simplest.
 - No → The simplest hypothesis requires non-trivial investigation → run the full procedure below.
 
-### Full Procedure: When the Trigger Check Doesn't Resolve
+### Step 2: Full Procedure (When the Trigger Check Doesn't Resolve)
 
-#### Step 1: Enumerate Competing Hypotheses
+#### Step 2a: Enumerate Competing Hypotheses
 
 List all plausible explanations for the observed behavior:
 
@@ -75,7 +75,7 @@ C. Database connection pool exhaustion
 D. Complex interaction between CDN cache, load balancer, and session service
 ```
 
-#### Step 2: Count Assumptions per Hypothesis
+#### Step 2b: Count Assumptions per Hypothesis
 
 | Hypothesis | Assumptions |
 |------------|-------------|
@@ -86,7 +86,7 @@ D. Complex interaction between CDN cache, load balancer, and session service
 
 Count each independent assumption: +1 per assumption, +1 per component involved, +2 per external dependency, +2 for timing-dependent behavior, +3 for rare conditions, +5 for "perfect storm" scenarios.
 
-#### Step 3: Verify Explanatory Power
+#### Step 2c: Verify Explanatory Power
 
 Ensure simpler hypotheses actually explain the evidence:
 
@@ -97,11 +97,11 @@ Hypothesis C (DB pool exhaustion): Explains traffic correlation ✓ — fewer as
 → PREFERRED by Occam's Razor
 ```
 
-#### Step 4: Test in Order of Fewest Assumptions
+#### Step 2d: Test in Order of Fewest Assumptions
 
 Investigate hypotheses from fewest to most assumptions. Do not skip to complex hypotheses until simple ones are ruled out.
 
-#### Step 5: Escalate Complexity Only When Evidence Forces It
+#### Step 2e: Escalate Complexity Only When Evidence Forces It
 
 When simple explanations are ruled out with evidence, move to more complex ones. Never escalate on intuition alone.
 
@@ -116,6 +116,83 @@ A completed Occam's Razor analysis produces:
 5. **Conclusion** — the confirmed hypothesis (or the next to test if unresolved)
 
 For trigger-shrink cases, the output may be a single line: "Tested simplest hypothesis X — confirmed/refuted."
+
+## Examples
+
+### Example: API Returning Stale Data
+
+```
+Symptom: Users see outdated profiles after editing.
+
+Hypothesis ranking (fewest assumptions):
+1. Cache TTL hasn't expired (1 assumption: caching layer exists)
+2. Read replica lag (2 assumptions: replica exists + lag is significant)
+3. Race condition in write-then-read (3 assumptions: async write + immediate read + no consistency guarantee)
+
+Test order: Check cache headers → confirmed: Cache-Control: max-age=3600.
+Simplest hypothesis was correct. Fix: reduce TTL or bust cache on write.
+```
+
+### Example: CI Pipeline Failing Intermittently
+
+```
+Symptom: Tests pass locally, fail ~20% of CI runs.
+
+Hypothesis ranking (fewest assumptions):
+1. Test order dependency (1 assumption: shared state between tests)
+2. Timing-sensitive test with race condition (2 assumptions: async code + tight timeout)
+3. CI resource contention causing OOM (3 assumptions: memory-heavy tests + shared CI runners + no limits)
+
+Test order: Randomize test order locally → reproduced failure.
+Root cause: Test 14 depends on global state set by Test 3.
+```
+
+## Template
+
+```markdown
+# Occam's Razor Analysis: [Bug/Problem]
+
+## Trigger Check
+- Simplest hypothesis: [description]
+- Testable in one step? [Yes → test and report / No → full procedure]
+
+## Hypothesis Ranking (fewest assumptions first)
+
+| # | Hypothesis | Assumptions | Count |
+|---|------------|-------------|-------|
+| A | [simplest] | [list each] | [n]   |
+| B | [next]     | [list each] | [n]   |
+| C | [complex]  | [list each] | [n]   |
+
+## Explanatory Power Check
+
+| Hypothesis | Fits evidence? | Notes |
+|------------|---------------|-------|
+| A          | [✓/✗]         | [why] |
+| B          | [✓/✗]         | [why] |
+
+## Test Order and Results
+1. [Hypothesis tested] → [confirmed/refuted] → [evidence]
+
+## Conclusion
+[Confirmed hypothesis or next to test]
+```
+
+## Verification Checklist
+- [ ] Listed all plausible hypotheses before testing any
+- [ ] Tested the simplest hypothesis that fits the evidence first
+- [ ] Did not skip to a complex hypothesis without ruling out simpler ones
+- [ ] Each hypothesis' assumptions are explicitly listed (not just gut "complexity")
+- [ ] Simpler hypotheses actually explain the evidence (explanatory power verified)
+- [ ] Escalated complexity only when evidence forced it, not on intuition
+
+## Key Questions
+- "What's the simplest hypothesis that fits the evidence?"
+- "Can I test it in one step?"
+- "How many independent assumptions does each hypothesis require?"
+- "Does the simpler hypothesis actually explain the evidence, or just sound simpler?"
+- "Am I jumping to a complex explanation because it feels more sophisticated?"
+- "Has the evidence ruled out the simple explanations, or am I just drawn to the interesting one?"
 
 ## Anti-Patterns
 

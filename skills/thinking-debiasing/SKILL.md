@@ -19,6 +19,24 @@ Only use this skill when you notice one of these patterns in a long trajectory w
 
 If the check doesn't change the decision, you're done. Don't name biases without acting on them. For risk anticipation, use `thinking-pre-mortem`; for trade-off analysis, use `thinking-opportunity-cost`; for decision speed, use `thinking-reversibility`.
 
+## When to Use
+
+- A **long trajectory** where you committed to a path early and are now rationalizing past it
+- You notice you're explaining away counter-evidence instead of updating your approach
+- Unusually high confidence with thin evidence after extended investment in one direction
+
+Decision flow:
+
+```
+Long trajectory with early commitment?
+  → No → Skip this skill; bias risk is low on short tasks
+  → Yes → Are you defending/rationalizing the current path?
+      → No → No trigger; continue working
+      → Yes → RUN SELF-CHECK (sunk-cost / confirmation / overconfidence)
+          → Check changes decision? → Update course
+          → Check doesn't change it? → Done; don't name biases without acting
+```
+
 ## When NOT to Use
 - Standard, single-step reasoning — the bias risk is already low; don't pad the answer with a bias audit.
 - Short tasks with no prior commitment to defend — sunk-cost/confirmation can't apply yet.
@@ -26,7 +44,28 @@ If the check doesn't change the decision, you're done. Don't name biases without
 - When a concrete framework already fits (thinking-pre-mortem for risks, thinking-opportunity-cost for trade-offs, thinking-reversibility for decision speed) — use it instead.
 
 ## Overview
+
+**Core Principle:** The most dangerous biases aren't the ones you know about — they're the ones operating while you think you're being objective. In a long trajectory, sunk-cost and confirmation bias compound silently.
+
 Based on Daniel Kahneman, Dan Lovallo, and Olivier Sibony's research on cognitive biases. The sections below are a fuller checklist; for an autonomous agent, treat them as a *reference for the narrow case above*, applied as self-checks (not as roles assigned to a team).
+
+## The Debiasing Process
+
+### Step 1: Detect the Trigger Pattern
+
+Check the Trigger Card above. If none of the three patterns match (sunk cost, confirmation, overconfidence), stop — you don't need this skill.
+
+### Step 2: Run the Matching Self-Check
+
+Run only the check that matches the detected pattern. Don't run all three by default.
+
+### Step 3: Re-Decide from Scratch
+
+If the check flags a bias, re-decide as if starting fresh today, ignoring prior investment and prior conclusions.
+
+### Step 4: Act or Affirm
+
+Either change course (and state why) or affirm the current path with a stated reason — not just "no bias found."
 
 ## The 12-Point Decision Quality Checklist
 
@@ -123,6 +162,38 @@ Before approving any significant recommendation, evaluate:
 - Generate the strongest case for an alternative before settling
 - Steel-man the option you're rejecting
 - Separate "what the evidence says" from "what I already concluded"
+
+## Examples
+
+### Example: Architecture Decision Debiasing
+
+```
+Decision: "We should rewrite Service X in Rust for performance."
+
+Bias check:
+- Sunk cost: We already spent 2 weeks prototyping in Rust → doesn't make the rewrite correct
+- Anchoring: Benchmarked one hot path; generalizing to the whole service
+- Confirmation bias: Only tested scenarios where Rust wins; ignored I/O-bound paths
+- Self-interest: Engineer proposing it wants to learn Rust
+
+Debiased reframe: Profile actual bottlenecks. If CPU-bound hot path is the issue,
+rewrite that function as a native extension — not the whole service.
+```
+
+### Example: Hiring Decision Debiasing
+
+```
+Decision: "Candidate A is clearly the best — great interview."
+
+Bias check:
+- Halo effect: Strong first impression coloring all subsequent evaluation
+- Similarity bias: Candidate went to same school as interviewer
+- Anchoring: First candidate interviewed; all others compared to them
+- Availability: Remembering one brilliant answer, forgetting two weak ones
+
+Debiased reframe: Score against pre-defined rubric before discussing.
+Compare scores, not impressions. Check if "culture fit" means "like me."
+```
 
 ## Decision Quality Audit Template
 

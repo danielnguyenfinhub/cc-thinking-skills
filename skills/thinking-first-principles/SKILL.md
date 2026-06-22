@@ -154,6 +154,31 @@ First Principles:
 - [ ] Validated that solution doesn't violate actual constraints
 - [ ] Identified minimum viable test to prove/disprove approach
 
+## Template
+
+```markdown
+# First Principles Analysis: [Problem/Constraint]
+
+## The Assumed Constraint
+[What "everyone knows" or treats as fixed]
+
+## Assumption Decomposition
+| Assumption | Physics/math? | Convention? | Evidence |
+|------------|--------------|-------------|----------|
+| | [Immutable] | [Challengeable] | |
+
+## Irreducible Truths
+[What remains after stripping away conventions — the actual constraints]
+
+## Rebuilt Solution
+[Solution built up from only the verified fundamentals]
+
+## Validation
+- [ ] Solution doesn't violate actual (physics/math) constraints
+- [ ] At least 3 "obvious" constraints were challenged
+- [ ] Minimum viable test identified to prove/disprove the approach
+```
+
 ## Combining with Other Models
 - **Inversion**: After first principles, ask "what would make this fail?"
 - **Second-Order Thinking**: Consider downstream effects of your new approach

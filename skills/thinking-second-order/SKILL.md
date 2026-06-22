@@ -160,7 +160,34 @@ For any significant decision, fill out:
 [Given analysis, what should we actually do?]
 ```
 
-## Questions to Surface Second-Order Effects
+## Template
+
+```markdown
+# Second-Order Analysis: [Decision]
+
+## Decision
+[What are we considering doing?]
+
+## First-Order Effect (Immediate)
+[What happens right away — the intended result]
+
+## Second-Order Effects (Next Deploy / Weeks)
+[What does the immediate effect cause? What behaviors change?]
+
+## Third-Order Effects (At Scale / Months)
+[Where does the trajectory lead at 10x usage or adoption?]
+
+## Feedback Loops
+[Does this create reinforcing or balancing dynamics?]
+
+## If Scaled
+[What happens if this becomes standard practice? "What if everyone did this?"]
+
+## Revised Decision
+[Given the full consequence chain, what should we actually do?]
+```
+
+## Key Questions
 - "And then what?"
 - "Who else is affected, and how will they respond?"
 - "What incentives does this create?"

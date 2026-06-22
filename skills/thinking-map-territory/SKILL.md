@@ -99,6 +99,73 @@ A completed Map-Territory verification produces:
 4. **Model Updated** — the corrected understanding after territory observation
 5. **Uncovered Aspects Noted** — what no available map covers (likely next bug site)
 
+## Examples
+
+### Example: Stale Documentation
+
+```
+Surprise: "getUserById should return null for missing users, but the page crashes."
+
+Map: the JSDoc comment says "returns null if not found"
+Territory: the function body throws UserNotFoundError on missing ID
+Delta: doc is stale; code was changed to throw, comment never updated
+Action: handle the exception; update the doc
+```
+
+### Example: Passing Tests, Wrong Behavior
+
+```
+Surprise: "All auth tests pass, but users report they can't log in with SSO."
+
+Map: test suite covers username/password and token auth
+Territory: SSO flow uses a different middleware path not covered by tests
+Delta: tests are a map of expected behavior, not all behavior
+Action: trace the actual SSO code path; add test coverage for it
+```
+
+## Template
+
+```markdown
+# Map-Territory Verification: [Surprise/Contradiction]
+
+## The Surprise
+[What behavior contradicts what you expected?]
+
+## Map Named
+- Source: [doc / test / comment / diagram / assumption / recall]
+- Claim: [what the map says]
+
+## Territory Verified
+- Method: [read code / ran it / queried data / reproduced / checked git log]
+- Observation: [what actually happens — specific, not interpreted]
+
+## Delta
+[Gap between map and territory]
+
+## Updated Model
+[Corrected understanding after territory observation]
+
+## Uncovered Aspects
+[What no available map covers — likely next bug site]
+```
+
+## Verification Checklist
+- [ ] Named the specific map being trusted (doc, test, comment, assumption)
+- [ ] Verified the territory directly (read/ran/queried/reproduced), not just theorized
+- [ ] Let the territory overrule the map when they disagreed
+- [ ] Documented the delta between map and territory
+- [ ] Noted uncovered aspects (what no map shows)
+- [ ] Did not re-verify something already confirmed this session
+
+## Key Questions
+
+- "Am I reasoning from the code, or from a description of the code?"
+- "When was this doc/comment/test last verified against the running system?"
+- "What does the actual code do — not what should it do?"
+- "Have I reproduced the behavior, or am I theorizing?"
+- "Is this map authoritative (generated, schema-derived) or hand-maintained?"
+- "Does this mismatch change my action, or can I note it and move on?"
+
 ## Anti-Patterns
 
 | Anti-Pattern | Symptom | Correction |

@@ -169,3 +169,49 @@ A completed TRIZ analysis produces:
 | **Applying to non-technical problems** | Using TRIZ for org dynamics or interpersonal conflicts | Separation targets system parameters, not people |
 | **Over-applying to testable contradictions** | Running full TRIZ when a quick measurement resolves which side matters | If you can test it cheaply, test it |
 | **Ignoring existing resources** | Adding new components when existing ones could be reused | Resource analysis before new component proposals |
+
+## Template
+
+```markdown
+# TRIZ Analysis: [Design Problem]
+
+## Contradiction Statement
+"We need [PARAMETER] to be [STATE 1] for [BENEFIT 1]
+ BUT also [STATE 2] for [BENEFIT 2]"
+
+## Ideal Final Result
+[What would the self-solving outcome look like?]
+
+## Separation Attempts
+
+| Dimension | Attempt | Result |
+|-----------|---------|--------|
+| Time | [Can states exist at different times?] | [Resolved / Not applicable] |
+| Space | [Can states exist in different places?] | [Resolved / Not applicable] |
+| Condition | [Can states exist under different conditions?] | [Resolved / Not applicable] |
+| Scale | [Can states exist at different system levels?] | [Resolved / Not applicable] |
+
+## Principles Scanned (if separation failed)
+[Which inventive principles were considered and why]
+
+## Resources Used
+[Existing capabilities leveraged before adding new ones]
+
+## Resolution
+[Concrete design decision that resolves the contradiction]
+```
+
+## Verification Checklist
+- [ ] Contradiction stated in the precise template form (Parameter must be State 1 BUT State 2)
+- [ ] Confirmed this is a genuine contradiction, not a routine trade-off with a clear winner
+- [ ] Tried all four separation dimensions before falling back to principles
+- [ ] Ideal Final Result described before jumping to solutions
+- [ ] Checked existing resources before proposing new components
+- [ ] Resolution eliminates the contradiction rather than compromising
+
+## Key Questions
+- "What exactly must be in two opposite states simultaneously — and why?"
+- "Can I separate the conflicting states in time, space, condition, or scale?"
+- "What already exists in the system that I could reuse?"
+- "Am I manufacturing a contradiction, or is this a genuine 'need both' tension?"
+- "Would a cheap test dissolve this contradiction without needing separation?"

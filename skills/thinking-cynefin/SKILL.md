@@ -36,6 +36,19 @@ Can you see clear cause→effect?
 - An approach isn't working and you suspect it's mismatched to the problem
 - Triaging an incident (is this stabilize-first chaos, or analyzable?)
 
+Decision flow:
+
+```
+Unsure how to approach?
+  → Yes → Can you see cause→effect?
+      obvious to everyone        → CLEAR (apply best practice)
+      knowable with analysis     → COMPLICATED (analyze, design)
+      only clear in hindsight    → COMPLEX (run safe-to-fail probes)
+      totally turbulent, no time → CHAOTIC (act now, understand later)
+      can't tell                 → DISORDER (decompose into parts)
+  → No → You already know the approach; skip classification and execute
+```
+
 ## When NOT to Use
 
 - The domain is already obvious and the approach is uncontested → skip the ceremony and just do it.
@@ -64,6 +77,99 @@ Before committing, test the classification:
 - "Is this actually complex, or am I avoiding the analysis?"
 - "Is this actually complicated, or am I over-planning a simple thing?"
 - "Has the situation moved to a different domain since I last looked?"
+
+## Procedure
+
+### Step 1: State the Problem or Situation
+
+Describe what you're trying to accomplish or resolve. Be specific enough that the classification is testable.
+
+### Step 2: Classify by Cause-Effect Relationship
+
+Ask: "Can experts reliably predict the outcome?" Walk the classifier table above.
+
+### Step 3: Match the Approach to the Domain
+
+Apply the prescribed approach (sense-categorize-respond for Clear, probe-sense-respond for Complex, etc.). If the approach feels wrong, re-check the classification.
+
+### Step 4: Re-Check as the Situation Evolves
+
+Domains shift — chaos stabilizes into complex/complicated, complicated systems become complex under novel conditions. Re-classify when the approach stops working.
+
+## Examples
+
+### Example: Production Outage Triage
+
+```
+Situation: API is returning 500s, error rate climbing, users reporting failures.
+
+Classification:
+  Can I see cause→effect? No — it's turbulent and getting worse.
+  → CHAOTIC: Act first to stabilize.
+
+Action: Roll back the last deploy. Observe. Error rate drops.
+  → Situation stabilizes → reclassify as COMPLICATED.
+  → Now analyze: what in the deploy caused it?
+```
+
+### Example: Flaky Test Suite
+
+```
+Situation: Tests pass locally but fail intermittently in CI.
+
+Classification:
+  Can I see cause→effect? Only in hindsight — sometimes it's timing,
+  sometimes ordering, sometimes resource contention.
+  → COMPLEX: Run safe-to-fail probes.
+
+Action: Add timing instrumentation, randomize test order, isolate
+  shared state. Amplify what reduces flakiness.
+```
+
+### Example: Adding a REST Endpoint
+
+```
+Situation: Need to add a standard CRUD endpoint following existing patterns.
+
+Classification:
+  Can I see cause→effect? Obvious — we have a pattern, it works reliably.
+  → CLEAR: Apply the existing pattern.
+
+Action: Follow the project's endpoint template. Don't over-engineer.
+```
+
+## Template
+
+```markdown
+# Cynefin Classification: [Situation]
+
+## Problem/Situation
+[What are you trying to accomplish or resolve?]
+
+## Classification
+- Cause-effect relationship: [obvious / knowable with analysis / only in hindsight / not perceivable]
+- Domain: [Clear / Complicated / Complex / Chaotic / Disorder]
+- Confidence in classification: [High / Medium / Low]
+
+## Prescribed Approach
+- [Approach matching the domain]
+
+## Confidence Check
+- [ ] Best practices reliably work here? (if yes → Clear)
+- [ ] Analysis can predict the outcome? (if yes → Complicated)
+- [ ] Can run a safe-to-fail probe? (if yes → Complex; if too turbulent → Chaotic)
+
+## Actions
+1. [Action matching the domain's approach]
+2. [Re-check trigger: when will I re-classify?]
+```
+
+## Verification Checklist
+- [ ] Classified the problem by cause-effect relationship, not by gut feel
+- [ ] Matched the approach to the domain (not the approach I'm most comfortable with)
+- [ ] Checked for common mismatches (Complex treated as Complicated, etc.)
+- [ ] Set a trigger to re-classify if the situation changes
+- [ ] If Disorder, decomposed into parts and classified each separately
 
 ## Snowden's Wisdom
 

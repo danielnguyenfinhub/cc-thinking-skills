@@ -31,6 +31,39 @@ About to give a specific/high-stakes answer?
 - **You can just look it up right now** — then the move is *fetch*, not abstain. Abstention is the fallback when grounding is genuinely unavailable, not an excuse to skip a cheap check.
 - **Brainstorming / clearly-hypothetical framing** — when the user has signalled they want options or speculation, labeled informed guesses are appropriate.
 
+## Procedure
+
+### Step 1: Identify the Zone
+
+Before giving a specific or high-stakes answer, ask: "Can I point to where this answer comes from?" Classify as Grounded (checkable source), Partial (plausible but unconfirmed), or Ungrounded (would be fabricating).
+
+### Step 2: Act on the Zone
+
+- Grounded → answer directly, cite the source
+- Partial → fetch/verify first, or mark uncertainty explicitly
+- Ungrounded → abstain, ask, or fetch — never confabulate
+
+### Step 3: Watch for Confabulation Tells
+
+An exact name/number/path with no memory of where it came from. A suspiciously convenient answer for something you never looked at. Hedging ("typically", "should be") around a claim the user will treat as fact.
+
+## Template
+
+```markdown
+# Circle of Competence Check: [Claim/Answer]
+
+## Self-Assessment
+- Claim: [What I'm about to assert]
+- Source: [Where this comes from — file read, command run, stable knowledge, or ???]
+- Zone: [Grounded / Partial / Ungrounded]
+
+## Action Taken
+- [ ] Grounded: answered directly with source
+- [ ] Partial: verified first / marked uncertainty
+- [ ] Ungrounded: abstained / asked / fetched
+- [ ] Did NOT confabulate a specific value without a source
+```
+
 ## The Three Zones (by grounding, not by ego)
 
 ### Zone 1: Grounded — answer
@@ -192,6 +225,33 @@ Self-assessment:
 
 Action: Give the well-grounded general tradeoffs; for the fit to *this* system,
         verify the actual access patterns before recommending.
+```
+
+### Example: Unfamiliar Deployment Platform
+
+```
+Situation: Asked to set up Kubernetes cluster for a team that's only used Heroku.
+
+Zone check: Ungrounded — no production K8s experience.
+Cheap to verify? No — K8s has deep operational complexity.
+
+Action: Flag the zone. Recommend managed K8s (EKS/GKE) to reduce operational surface,
+        or evaluate whether Heroku/Railway meets the actual scaling need (first principles).
+        Do not architect a custom K8s setup from recall alone.
+```
+
+### Example: Familiar Language, Unfamiliar Framework
+
+```
+Situation: Senior Python developer asked about Django performance tuning.
+          They know Python deeply but haven't used Django's ORM.
+
+Zone check: Partial — Python is grounded, Django ORM is not.
+Cheap to verify? Yes — Django docs are excellent and specific.
+
+Action: Give grounded Python advice (profiling, async patterns).
+        For ORM-specific tuning (select_related, prefetch_related, query analysis),
+        read the docs or codebase before advising — don't confabulate from general ORM knowledge.
 ```
 
 ## Verification Checklist

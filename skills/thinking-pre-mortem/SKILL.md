@@ -129,6 +129,48 @@ It is [Future Date]. [Project] has failed.
 - [ ] [Action item from pre-mortem]
 ```
 
+## Examples
+
+### Example: Database Migration Pre-Mortem
+
+```
+Plan: Migrate 50M-row user table from MySQL to PostgreSQL over a weekend.
+
+Failure frame: "It's Monday morning. The migration failed. Users can't log in."
+
+Failure reasons generated:
+- Schema differences caused silent data truncation on VARCHAR→TEXT fields
+- Migration ran longer than the weekend window; partial state on Monday
+- Application code assumed MySQL-specific query syntax
+- Rollback plan didn't account for writes during the migration window
+- Connection pool config differences caused cascading timeouts
+
+Top risks + mitigations:
+- P0: Partial migration state → run on read-replica first; cutover only on verified completion
+- P0: Silent data truncation → dry-run migration on staging with row-count + checksum verification
+- P1: MySQL-specific syntax → grep codebase for MySQL-isms; integration test suite against PG
+```
+
+### Example: API Versioning Launch Pre-Mortem
+
+```
+Plan: Ship v2 API alongside v1, deprecate v1 in 90 days.
+
+Failure frame: "It's 90 days later. v1 is still carrying 80% of traffic. v2 adoption failed."
+
+Failure reasons generated:
+- v2 breaking changes were undocumented; clients didn't know what to change
+- Migration guide assumed client architectures that didn't match reality
+- v1 deprecation warnings were in response headers nobody read
+- Internal services still pinned to v1, signaling it was safe to stay
+- No client-by-client outreach; relied on docs alone
+
+Top risks + mitigations:
+- P0: Undocumented breaking changes → diff v1/v2 contracts, publish migration guide before launch
+- P1: Internal services on v1 → migrate internal consumers first as proof of concept
+- P1: No outreach → identify top-10 consumers by traffic, contact directly with timeline
+```
+
 ## Why Pre-Mortems Work
 
 1. **Reframes prediction as explanation**: Explaining an "already-happened" failure is concrete; predicting one stays vague.
